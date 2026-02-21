@@ -1,0 +1,8 @@
+services:
+  pi-discord:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./workspace:/workspace
+      - ./sessions:/root/.pi
