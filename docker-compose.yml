@@ -3,6 +3,8 @@ services:
     build: .
     restart: unless-stopped
     env_file: .env
+    ports:
+      - "6080:6080"
     volumes:
       - ./workspace:/workspace
       - ./sessions:/root/.pi
